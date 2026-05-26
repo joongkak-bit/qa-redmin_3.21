@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.3
+    container_name: redmine_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wndrkr@#58  # 루트 비밀번호 (원하는 대로 변경)
+      MYSQL_DATABASE: redmine
+      MYSQL_USER: redmine
+      MYSQL_PASSWORD: goguma82%#         # Dockerfile의 DB 패스워드와 일치해야 함
+    volumes:
+      - redmine_db_data:/var/lib/mysql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+  redmine:
+    build: .
+    container_name: redmine_app
+    restart: always
+    ports:
+      - "80:80"     # Apache2가 Redmine(프록시) + CKFinder 모두 처리
+    depends_on:
+      - db
+    volumes:
+      # 호스트의 현재 디렉토리와 컨테이너 내부를 연결합니다.
+      - ./files:/usr/src/redmine/files
+      - ./plugins:/usr/src/redmine/plugins
+      - ./plugin_assets:/usr/src/redmine/public/plugin_assets
+      - ./ckfinder:/var/www/html/ckfinder
+
+
+volumes:
+  redmine_db_data:

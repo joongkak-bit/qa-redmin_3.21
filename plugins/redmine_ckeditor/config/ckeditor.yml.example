@@ -1,0 +1,4 @@
+allowedContent: true
+bodyClass: "wiki"
+removePlugins: "div,flash,forms,iframe"
+forcePasteAsPlainText: false

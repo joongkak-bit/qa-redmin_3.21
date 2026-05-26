@@ -38,7 +38,7 @@ Apache2 가 리버스 프록시 역할을 하며, CKFinder(PHP) 와 Redmine(WEBr
 ┌─────────────────────────────────────▼───────────────────────────────────────┐
 │  redmine_db  (MariaDB 10.3)                                                 │
 │  DB: redmine  /  User: redmine                                              │
-│  데이터 볼륨: redmine_db_data → /var/lib/mysql                               │
+│  데이터 볼륨: redmine_db_data → /var/lib/mysql                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 

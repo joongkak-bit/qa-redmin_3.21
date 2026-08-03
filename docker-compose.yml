@@ -6,10 +6,10 @@ services:
     container_name: redmine_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: wndrkr@#58  # 루트 비밀번호 (원하는 대로 변경)
+      MYSQL_ROOT_PASSWORD: T7#mQ92!zLp@4xV  # 루트 비밀번호 (원하는 대로 변경)
       MYSQL_DATABASE: redmine
       MYSQL_USER: redmine
-      MYSQL_PASSWORD: goguma82%#         # Dockerfile의 DB 패스워드와 일치해야 함
+      MYSQL_PASSWORD: v9@Qm2#Lx7!Rz4$p        # Dockerfile의 DB 패스워드와 일치해야 함
     volumes:
       - redmine_db_data:/var/lib/mysql
     command:

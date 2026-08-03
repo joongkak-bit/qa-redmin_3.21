@@ -34,7 +34,7 @@ WORKDIR /usr/src/redmine
 RUN curl -L https://www.redmine.org/releases/redmine-3.2.1.tar.gz | tar -xz --strip-components=1
 
 # 데이터베이스 연결 설정 (docker-compose.yml의 DB 정보와 일치시킴)
-RUN echo "production:\n  adapter: mysql2\n  database: redmine\n  host: db\n  username: redmine\n  password: goguma82%#\n  encoding: utf8mb4" > config/database.yml
+RUN echo "production:\n  adapter: mysql2\n  database: redmine\n  host: db\n  username: redmine\n  password: v9@Qm2#Lx7!Rz4$p\n  encoding: utf8mb4" > config/database.yml
 
 # Bundler 설치 (Ruby 2.3 호환을 위해 구버전 1.x 설치)
 RUN gem install bundler -v '~> 1.17' --no-ri --no-rdoc
